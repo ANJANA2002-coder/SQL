@@ -1,6 +1,8 @@
-INSERT INTO `books`(`ID`, `Title`, `Author`, `Price`, `Genre`) VALUES ('1','MANJU','M T VASUDEVAN NAIR','150','PSHYCHOLOGICAL/ROMANCE');
-INSERT INTO `books`( `Title`, `Author`, `Price`, `Genre`) VALUES ('AADUJEEVITHAM','VAIKOM MUHAMMED BHASHEER','210','FICTION'),('MARTHANDAVARMA','C V RAMAN PILLAI','350','HISTORY'),('A BRIEF HISTORY OF TIME','STEPHEN HAWKING','400','SCIENCE'),('THE GREAT GATSBY','F SCOTT FITZGERALD','430','CLASSIC FICTION' );
-SELECT * FROM `books` WHERE Price>400;
-SELECT * FROM `books` WHERE Genre in ('HISTORY','SCIENCE','FICTION');
-SELECT * FROM `books` WHERE Title = 'THE GREAT GATSBY';
-SELECT * FROM `books` WHERE Author <>'DAN BROWN';
+INSERT INTO `students`(`ID`, `Name`, `Course`, `Fee_paid`, `Status`) VALUES ('1','Alice','Web Development','5000','Inactive');
+INSERT INTO `students`( `Name`, `Course`, `Fee_paid`, `Status`) VALUES ('Bob','Data Science','7000','Inactive'),('Charlie','UI/UX design','4000','Active');
+SELECT * FROM `students` WHERE Fee_paid>5000;
+UPDATE `students` SET Status='Active' WHERE Course='Web Development';
+UPDATE `students` SET Fee_paid='8000' WHERE Course='Data Science';
+UPDATE `students` SET Status='Inactive',Fee_paid='3500' WHERE ID='3';
+DELETE FROM `students` WHERE ID='2';
+DELETE FROM `students` WHERE Status='Inactive';
