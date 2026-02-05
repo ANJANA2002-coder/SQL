@@ -17,6 +17,6 @@ CREATE TABLE enrollments (
     FOREIGN KEY (student_id) REFERENCES students(student_id),
     FOREIGN KEY (course_id) REFERENCES courses(course_id)
 );
-INSERT INTO students VALUES (1, 'Anjana', 'anjana@gmail.com'),(2,'rahul@gmail.com');
+INSERT INTO students VALUES (1, 'Anjana', 'anjana@gmail.com'),(2,'Rahul', 'rahul@gmail.com');
 INSERT INTO courses VALUES (101, 'Python'),(102, 'SQL');
 INSERT INTO enrollments VALUES (1, 101),(2,102);
